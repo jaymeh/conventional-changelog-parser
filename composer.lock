@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "699fcfa7b10e8162796badea03f0db55",
+    "content-hash": "b76896ca61ff5a98c379cc08d6e88e96",
     "packages": [
         {
             "name": "brick/math",
@@ -3876,6 +3876,43 @@
             "time": "2022-03-03T08:28:38+00:00"
         },
         {
+            "name": "fossbarrow/laravel-phpcs",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fossbarrow/laravel-phpcs.git",
+                "reference": "afe30dc96a8bbe34ccf29fb3d1e3368264daa573"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fossbarrow/laravel-phpcs/zipball/afe30dc96a8bbe34ccf29fb3d1e3368264daa573",
+                "reference": "afe30dc96a8bbe34ccf29fb3d1e3368264daa573",
+                "shasum": ""
+            },
+            "require-dev": {
+                "php": "^7.4",
+                "squizlabs/php_codesniffer": "^3.5.5"
+            },
+            "default-branch": true,
+            "type": "phpcs-ruleset",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "patricnox",
+                    "email": "hello@patricnox.info"
+                }
+            ],
+            "description": "phpcs ruleset for laravel projects",
+            "support": {
+                "issues": "https://github.com/fossbarrow/laravel-phpcs/issues",
+                "source": "https://github.com/fossbarrow/laravel-phpcs/tree/main"
+            },
+            "time": "2022-02-04T08:51:16+00:00"
+        },
+        {
             "name": "hamcrest/hamcrest-php",
             "version": "v2.0.1",
             "source": {
@@ -5908,7 +5945,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "fossbarrow/laravel-phpcs": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
