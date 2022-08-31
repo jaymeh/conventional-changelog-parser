@@ -4,6 +4,25 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.1.0](https://github.com/jaymeh/conventional-changelog-parser/compare/v1.0.2...v1.1.0) (2022-08-31)
+
+### Features
+
+
+##### Ci
+
+* Adds ability to automatically build and attach a new binary. ([9fcdba](https://github.com/jaymeh/conventional-changelog-parser/commit/9fcdba788d65868401577041d6697c181bb1a49e))
+
+### Bug Fixes
+
+
+##### Test
+
+* Fixes a side effect of the test now that we have a release. ([977f6c](https://github.com/jaymeh/conventional-changelog-parser/commit/977f6ce476382237f9e6af31fe685afdc6cb2c8f))
+
+
+---
+
 ## [1.0.2](https://github.com/jaymeh/conventional-changelog-parser/compare/v1.0.1...v1.0.2) (2022-08-31)
 
 ### Bug Fixes
