@@ -23,6 +23,7 @@
     "require-dev": {
         "fossbarrow/laravel-phpcs": "dev-main",
         "laravel/pint": "^1.0",
+        "marcocesarato/php-conventional-changelog": "^1.15",
         "mockery/mockery": "^1.4.4",
         "pestphp/pest": "^1.21.3"
     },
