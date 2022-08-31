@@ -20,6 +20,9 @@ jobs:
       - name: Get Release Notes
         run: ./changelog-checker > ${{ github.workspace }}-CHANGELOG.txt
 
+      - name: Build Binary
+        run: php ./changelog-checker app:build ${{github.ref_name}}
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
@@ -28,3 +31,5 @@ jobs:
           body_path: ${{ github.workspace }}-CHANGELOG.txt
           generate_release_notes: false
           token: ${{ secrets.MY_PAT }}
+          files:
+            builds/${{github.ref_name}}
