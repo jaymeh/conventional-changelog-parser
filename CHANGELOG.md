@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.0.2](https://github.com/jaymeh/conventional-changelog-parser/compare/v1.0.1...v1.0.2) (2022-08-31)
+
+### Bug Fixes
+
+* Issue with building release in CI. ([0452e8](https://github.com/jaymeh/conventional-changelog-parser/commit/0452e8852b81a8c15c6be4cd83097e4e1a475f1d))
+
+
+---
+
 ## [1.0.1](https://github.com/jaymeh/conventional-changelog-parser/compare/v1.0.0...v1.0.1) (2022-08-31)
 
 ### Bug Fixes
