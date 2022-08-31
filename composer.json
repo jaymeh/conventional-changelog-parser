@@ -65,5 +65,5 @@
     "bin": [
         "changelog-checker"
     ],
-    "version": "origin/1.x"
+    "version": "1.0.0"
 }
