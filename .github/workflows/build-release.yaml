@@ -1,0 +1,25 @@
+name: Build Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Get Release Notes
+        run: ./changelog-checker > ${{ github.workspace }}-CHANGELOG.txt
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: false
+          name: ${{ github.ref }}
+          body_path: ${{ github.workspace }}-CHANGELOG.txt
+          generate_release_notes: false
+          token: ${{ secrets.MY_PAT }}
