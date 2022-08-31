@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Storage;
 
 test('command outputs error if it cannot find a changelog file', function() {
+    Storage::delete('CHANGELOG.md');
+
     $this->withoutExceptionHandling();
     $this->artisan('changelog:get-recent')
         ->expectsOutput('Cannot locate CHANGELOG.md file within project')
