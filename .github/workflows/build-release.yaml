@@ -14,8 +14,15 @@ jobs:
         with:
             token: ${{ secrets.MY_PAT }}
 
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+            php-version: 8.0
+            extensions: curl, mbstring, zip, pcntl, iconv
+            coverage: none
+
       - name: Install dependencies
-        run: composer update --prefer-dist --no-interaction
+        run: composer install --prefer-dist --no-interaction
 
       - name: Get Release Notes
         run: ./changelog-checker > ${{ github.workspace }}-CHANGELOG.txt
