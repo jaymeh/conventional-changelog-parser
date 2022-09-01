@@ -22,7 +22,7 @@ jobs:
             coverage: none
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-interaction
+        run: composer update --prefer-dist --no-interaction
 
       - name: Get Release Notes
         run: ./changelog-checker > ${{ github.workspace }}-CHANGELOG.txt
