@@ -27,6 +27,11 @@ jobs:
       - name: Get Release Notes
         run: ./changelog-checker > ${{ github.workspace }}-CHANGELOG.txt
 
+      - name: Setup Signatures
+        run:
+            - sed -i 's/__KEY__/${{ secrets.SIGNING_KEY }}' box.json
+            - sed -i 's/__PASSPHRASE__/${{ secrets.SIGNING_PASSPHRASE }}' box.json
+
       - name: Build Binary
         run: php ./changelog-checker app:build ${{github.ref_name}}
 
