@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies
         run: composer update --prefer-dist --no-interaction
 
-      - name: Get Release Notes
-        run: ./changelog-checker > ${{ github.workspace }}-CHANGELOG.txt
-
       - name: Build Binary
         run: php ./changelog-checker app:build changelog-checker.phar
 
@@ -39,6 +36,9 @@ jobs:
 
       - name: Create GPG signature of PHAR
         run: gpg -u jaymeh@users.noreply.github.com --detach-sign --output builds/changelog-checker.phar.asc builds/changelog-checker.phar
+
+      - name: Get Release Notes
+        run: ./changelog-checker > ${{ github.workspace }}-CHANGELOG.txt
 
       - name: Release
         uses: softprops/action-gh-release@v1
