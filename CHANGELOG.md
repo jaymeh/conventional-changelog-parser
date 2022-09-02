@@ -4,6 +4,19 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.2.3](https://github.com/jaymeh/conventional-changelog-parser/compare/v1.2.2...v1.2.3) (2022-09-02)
+
+### Bug Fixes
+
+* Remove encrypted signing key. ([c5ff3a](https://github.com/jaymeh/conventional-changelog-parser/commit/c5ff3a4f4f77a6460fe6ead55915dbe884fac862))
+
+##### Ci
+
+* Move the changelog step further down the pipeline. ([74fee5](https://github.com/jaymeh/conventional-changelog-parser/commit/74fee51593792a8013c9940299e3d2fe298cd9b5))
+
+
+---
+
 ## [1.2.2](https://github.com/jaymeh/conventional-changelog-parser/compare/v1.2.1...v1.2.2) (2022-09-02)
 
 ### Bug Fixes
