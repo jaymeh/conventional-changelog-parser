@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.2.1](https://github.com/jaymeh/conventional-changelog-parser/compare/v1.2.0...v1.2.1) (2022-09-02)
+
+### Bug Fixes
+
+* Switch to using a new method for keys. ([c95c1c](https://github.com/jaymeh/conventional-changelog-parser/commit/c95c1c0debd2e8e4dc472776dffc5a139eb5ae8f))
+
+
+---
+
 ## [1.2.0](https://github.com/jaymeh/conventional-changelog-parser/compare/v1.1.2...v1.2.0) (2022-09-02)
 
 ### Features
