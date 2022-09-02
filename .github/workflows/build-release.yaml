@@ -32,9 +32,9 @@ jobs:
 
       - name: Create GPG signature of PHAR
         run: |
-            - echo $DECRYPT_KEY | gpg --passphrase-fd 0 keys.asc.gpg
-            - gpg --batch --yes --import keys.asc
-            - echo $SIGN_KEY | gpg --passphrase-fd 0 -u 00D81146 --armor --detach-sig builds/changelog-checker.phar
+            echo $DECRYPT_KEY | gpg --passphrase-fd 0 keys.asc.gpg
+            gpg --batch --yes --import keys.asc
+            echo $SIGN_KEY | gpg --passphrase-fd 0 -u 00D81146 --armor --detach-sig builds/changelog-checker.phar
         env:
             SIGN_KEY: ${{ secrets.SIGN_KEY }}
             DECRYPT_KEY: ${{ secrets.DECRYPT_KEY }}
