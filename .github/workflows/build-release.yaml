@@ -32,12 +32,13 @@ jobs:
 
       - name: Create GPG signature of PHAR
         run: |
-            echo $DECRYPT_KEY | gpg --passphrase-fd 0 keys.asc.gpg
-            gpg --batch --yes --import keys.asc
-            echo $SIGN_KEY | gpg --passphrase-fd 0 -u 00D81146 --armor --detach-sig builds/changelog-checker.phar
+            mkdir -p ~/.gnupg/
+            chmod 0700 ~/.gnupg/
+            echo "$GPG_SIGNING_KEY" > ~/.gnupg/private.key
+            gpg --import ~/.gnupg/private.key
+            gpg -u jaymeh@users.noreply.github.com --detach-sign --output builds/changelog-checker.phar.asc builds/changelog-checker.phar
         env:
-            SIGN_KEY: ${{ secrets.SIGN_KEY }}
-            DECRYPT_KEY: ${{ secrets.DECRYPT_KEY }}
+            GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
 
       - name: Release
         uses: softprops/action-gh-release@v1
