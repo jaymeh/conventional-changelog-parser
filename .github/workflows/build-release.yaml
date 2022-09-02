@@ -3,7 +3,7 @@ name: Build Release
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "*.*.*"
 
 jobs:
   build:
@@ -28,7 +28,16 @@ jobs:
         run: ./changelog-checker > ${{ github.workspace }}-CHANGELOG.txt
 
       - name: Build Binary
-        run: php ./changelog-checker app:build ${{github.ref_name}}
+        run: php ./changelog-checker app:build changelog-checker.phar
+
+      - name: Create GPG signature of PHAR
+        run: |
+            - echo $DECRYPT_KEY | gpg --passphrase-fd 0 keys.asc.gpg
+            - gpg --batch --yes --import keys.asc
+            - echo $SIGN_KEY | gpg --passphrase-fd 0 -u 00D81146 --armor --detach-sig builds/changelog-checker.phar
+        env:
+            SIGN_KEY: ${{ secrets.SIGN_KEY }}
+            DECRYPT_KEY: ${{ secrets.DECRYPT_KEY }}
 
       - name: Release
         uses: softprops/action-gh-release@v1
@@ -38,5 +47,6 @@ jobs:
           body_path: ${{ github.workspace }}-CHANGELOG.txt
           generate_release_notes: false
           token: ${{ secrets.MY_PAT }}
-          files:
-            builds/${{github.ref_name}}
+          files: |
+            builds/changelog-checker.phar
+            builds/changelog-checker.phar.asc
