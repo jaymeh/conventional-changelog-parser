@@ -1,4 +1,5 @@
-name: Create Release # Workflow name displayed on GitHub
+name: Deploy New Release # Workflow name displayed on GitHub
+
 on:
   workflow_dispatch:
     branches:
