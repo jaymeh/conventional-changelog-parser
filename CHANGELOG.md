@@ -4,6 +4,16 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.2.4](https://github.com/jaymeh/conventional-changelog-parser/compare/v1.2.3...v1.2.4) (2022-09-08)
+
+### Bug Fixes
+
+* Disable unit tests since it causes the suite to fail and we aren't using them. ([c9bdb9](https://github.com/jaymeh/conventional-changelog-parser/commit/c9bdb911e24c26b0402aff1f2389892890c78a77))
+* Remove example test. ([eade02](https://github.com/jaymeh/conventional-changelog-parser/commit/eade02f5c71529f51241c8a30d1dc3738ef2c841))
+
+
+---
+
 ## [1.2.3](https://github.com/jaymeh/conventional-changelog-parser/compare/v1.2.2...v1.2.3) (2022-09-02)
 
 ### Bug Fixes
