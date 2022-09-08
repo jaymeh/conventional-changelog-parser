@@ -1,19 +1,19 @@
 {
-    "name": "laravel-zero/laravel-zero",
-    "description": "The Laravel Zero Framework.",
+    "name": "jaymeh/changelog-checker",
+    "description": "This library was built to parse single entries from conventional changelogs.",
     "keywords": [
-        "framework",
-        "laravel",
-        "laravel zero",
+        "changelog",
+        "conventional commits",
+        "conventional changelog",
         "console",
         "cli"
     ],
-    "homepage": "https://laravel-zero.com",
+    "homepage": "https://jaymeh.co.uk",
     "type": "project",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/laravel-zero/laravel-zero/issues",
-        "source": "https://github.com/laravel-zero/laravel-zero"
+        "issues": "https://github.com/jaymeh/conventional-changelog-parser/issues",
+        "source": "https://github.com/jaymeh/conventional-changelog-parser"
     },
     "authors": [
         {
